@@ -13,3 +13,6 @@ If you want to add more themes, just add them unzipped in the folder themes of t
 
 ## Checking existing themes
 Run wordpress locally and pick theme from the CMS and check it out on FE
+
+## Project screenshot
+![ScreenShot](https://raw.github.com/ivevil/docker-wordpress/main/screenshot.png)
