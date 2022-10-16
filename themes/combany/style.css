@@ -124,7 +124,7 @@ body {
     transform: none;
   }
 }
-.combany header {
+.combany .combany-home header {
   padding-left: 125px;
   height: 100%;
   width: 100%;
@@ -139,16 +139,17 @@ body {
   background-position: right 0 top 0;
 }
 @media only screen and (max-width: 1439px) {
-  .combany header {
+  .combany .combany-home header {
     background-size: contain;
   }
 }
 @media only screen and (max-width: 1023px) {
-  .combany header {
+  .combany .combany-home header {
     padding-left: 0;
   }
 }
 .combany #navbar {
+  top: 0;
   background: transparent;
   position: fixed;
   width: 100%;
@@ -808,6 +809,65 @@ body {
   margin-top: 50px;
   max-width: 100% !important;
   width: 100%;
+}
+
+.combany__page-section {
+  min-height: 45vH;
+}
+.combany__entry-header {
+  width: 100%;
+}
+.combany__entry-header img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.comment-respond {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-navigation .nav-links {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+.post-navigation .nav-links .nav-next,
+.post-navigation .nav-links .nav-previous {
+  border: 2px solid gray;
+  border-radius: 30px;
+  padding: 20px;
+}
+.post-navigation .nav-links .nav-next:hover,
+.post-navigation .nav-links .nav-previous:hover {
+  background: #002041;
+  color: #ffffff;
+  text-decoration: none;
+}
+.post-navigation .nav-links .meta-nav,
+.post-navigation .nav-links .post-title {
+  color: #00a5ea;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.post {
+  padding-top: 70px;
+  margin: 0 auto;
+}
+.post .entry-title {
+  text-align: center;
+}
+.post .entry-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px;
 }
 
 footer {

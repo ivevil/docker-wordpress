@@ -13,7 +13,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    <header class="entry-header alignwide">
+    <header class="combany__entry-header alignwide">
         <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
         <?php if (has_post_thumbnail()) {
             the_post_thumbnail();
@@ -40,7 +40,7 @@
     </footer><!-- .entry-footer -->
 
     <?php if (!is_singular('attachment')) : ?>
-        <?php // get_template_part( 'template-parts/post/author-bio' ); 
+        <?php get_template_part( 'template-parts/post/author-bio' ); 
         ?>
     <?php endif; ?>
 

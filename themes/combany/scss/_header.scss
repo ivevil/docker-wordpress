@@ -115,7 +115,7 @@
     }
   }
 
-  header {
+  .combany-home header {
     padding-left: 125px;
     height: 100%;
     width: 100%;
@@ -134,6 +134,7 @@
   }
 
   #navbar {
+    top: 0;
     background: transparent;
     position: fixed;
     width: 100%;
