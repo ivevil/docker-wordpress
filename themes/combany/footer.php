@@ -7,8 +7,8 @@
       <div class="combany__footer-middle-wrapper">
         <img src="<?= get_template_directory_uri() ?>/images/icon-mobile.png" alt="">
         <div class="combany__footer-middle-call">
-          <h3>+49 1 23456789</h3>
-          <a href="tel:+49123456789">
+          <h3><?= get_theme_mod('combany_footer_phone') != '' ? get_theme_mod('combany_footer_phone') : '+49 1 23456789' ?></h3>
+          <a href="tel:<?= get_theme_mod('combany_footer_phone') != '' ? get_theme_mod('combany_footer_phone') : '+49123456789' ?>">
             <h4>Give us a call</h4>
           </a>
         </div>
@@ -16,8 +16,8 @@
       <div class="combany__footer-middle-wrapper">
         <img src="<?= get_template_directory_uri() ?>/images/icon-envelope.png" alt="">
         <div class="combany__footer-middle-email">
-          <h3>contact@combany.com</h3>
-          <a href="mailto:contact@combany.com">
+          <h3><?= get_theme_mod('combany_footer_email') != '' ? get_theme_mod('combany_footer_email') : 'contact@combany.com' ?></h3>
+          <a href="mailto:<?= get_theme_mod('combany_footer_email') != '' ? get_theme_mod('combany_footer_email') : 'contact@combany.com' ?>">
             <h4>Send us a Message</h4>
           </a>
         </div>
@@ -25,7 +25,7 @@
       <div class="combany__footer-middle-wrapper">
         <img src="<?= get_template_directory_uri() ?>/images/icon-pin.png" alt="">
         <div class="combany__footer-middle-pin">
-          <h3>Karlsplatz, Wuppertal</h3>
+          <h3><?= get_theme_mod('combany_footer_location') != '' ? get_theme_mod('combany_footer_location') : 'Karlsplatz, Wuppertal' ?></h3>
           <a href="">
             <h4>Get all the information</h4>
           </a>
@@ -40,15 +40,21 @@
         <a href="#" id="back-to-top"><img src="<?= get_template_directory_uri() ?>/images/back-to-top.png" alt=""></a>
       </div>
       <div class="combany__footer-bottom-social">
-        <a href="https://www.facebook.com/">
+      <?php if(get_theme_mod('combany_footer_facebook') != ''): ?>
+        <a href="<?= get_theme_mod('combany_footer_facebook') != '' ? get_theme_mod('combany_footer_facebook') : 'https://facebook.com/page/combany' ?>">
           <div class="combany__fb-icon"></div>
         </a>
-        <a href="https://www.instagram.com/">
+        <?php endif; ?>
+        <?php if(get_theme_mod('combany_footer_instagram') != ''): ?>
+        <a href="<?= get_theme_mod('combany_footer_instagram') != '' ? get_theme_mod('combany_footer_instagram') : 'https://instagram.com/combany' ?>">
           <div class="combany__insta-icon"></div>
         </a>
-        <a href="https://www.linkedin.com/">
+        <?php endif; ?>
+        <?php if(get_theme_mod('combany_footer_linkedin') != ''): ?>
+        <a href="<?= get_theme_mod('combany_footer_linkedin') != '' ? get_theme_mod('combany_footer_linkedin') : 'https://linkedin.com/combany' ?>">
           <div class="combany__linkedin-icon"></div>
         </a>
+        <?php endif; ?>
       </div>
     </div>
   </footer>

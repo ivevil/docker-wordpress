@@ -31,29 +31,33 @@
     <div class="combany__section-client-work">
       <hr class="primary">
       <div class="combany__section-client-work-title">
-        Client work
+      <?= get_theme_mod('combany_client_work_title') != '' ? get_theme_mod('combany_client_work_title') : 'Client work' ?>
       </div>
       <div class="combany__section-client-work-description">
-        For leading enterprise customers, we develop mobile apps, web front-ends, and scalable cloud solutions
+      <?= get_theme_mod('combany_client_work_description') != '' ? get_theme_mod('combany_client_work_description') : 'For leading enterprise customers, we develop mobile apps, web front-ends, and scalable cloud solutions' ?>
       </div>
 
       <div class="combany__section-client-work-both">
         <div class="combany__section-client-work-left">
-          <img src="<?= get_template_directory_uri() ?>/images/iphones-triangle.png">
+        <?php $urlImg = get_theme_mod('combany_client_image') != '' ? get_theme_mod('combany_client_image') : get_template_directory_uri() . '/images/iphones-triangle.png' ?>
+        <?php //var_dump($urlImg);die; ?>  
+        <img src="<?= $urlImg ?>" alt="Client image">
         </div>
         <div class="combany__section-client-work-right">
-          <h1>Herbalife Nutrition</h1>
-          <h2>Stay Connected with Herbalife+</h2>
+          <h1><?= get_theme_mod('combany_second_title') != '' ? get_theme_mod('combany_second_title') : 'Herbalife Nutrition' ?></h1>
+          <h2><?= get_theme_mod('combany_second_second_title') != '' ? get_theme_mod('combany_second_second_title') : 'Stay Connected with Herbalife+' ?></h2>
           <div class="combany__section-client-work-right-details">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-airplay"><path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path><polygon points="12 15 17 21 7 21 12 15"></polygon></svg>
-            <h3>SET WEIGHT</h3>
-            <p>The customer and his nutritionist conveniently set their weight, sport and fitness goals in the app.</p>
+            <h3><?= get_theme_mod('combany_second_third_title') != '' ? get_theme_mod('combany_second_third_title') : 'SET WEIGHT' ?></h3>
+            <p><?= get_theme_mod('combany_third_client_description') != '' ? get_theme_mod('combany_third_client_description') : 'The customer and his nutritionist conveniently set their weight, sport and fitness goals in the app.' ?></p>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clipboard"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
-            <h3>INDIVIDUAL MEAL PLAN</h3>
-            <p>The consultant creates an individual meal plan that immediately becomes visible in the user app.</p>
+            <h3><?= get_theme_mod('combany_second_fourth_title') != '' ? get_theme_mod('combany_second_fourth_title') : 'INDIVIDUAL MEAL PLAN' ?></h3>
+            <p><?= get_theme_mod('combany_fourth_description') != '' ? get_theme_mod('combany_fourth_description') : 'The consultant creates an individual meal plan that immediately becomes visible in the user app.' ?></p>
           </div>
-          <button class="btn">Read More</button>
-        </div>
+          <a href="<?= get_theme_mod('combany_client_button_url') != '' ? get_theme_mod('combany_client_button_url') : 'https://google.com' ?>">
+            <button class="btn"><?= get_theme_mod('combany_client_button') != '' ? get_theme_mod('combany_client_button') : 'Read more' ?></button>
+          </a>
+          </div>
       </div>
     </div>
 
@@ -68,13 +72,16 @@
     <div class="combany__section-client-agile">
       <hr class="primary">
       <div class="combany__section-client-agile-title">
-        <h1>Agile teams delivering</h1>
-        <h1>the future digital products for your business</h1>
+        <h1><?= get_theme_mod('combany_teams_1_title') != '' ? get_theme_mod('combany_teams_1_title') : 'Agile teams delivering' ?></h1>
+        <h1><?= get_theme_mod('combany_teams_2_title') != '' ? get_theme_mod('combany_teams_2_title') : 'the future digital products for your business' ?></h1>
       </div>
       <ul>
-        <li>Fast delivery and highest transparency</li>
+        <!-- <li>Fast delivery and highest transparency</li>
         <li>Commercial reliability of all solutions</li>
-        <li>Working software from day one</li>
+        <li>Working software from day one</li> -->
+        <?= get_theme_mod('combany_teams_description') != '' ? get_theme_mod('combany_teams_description') : '-Fast delivery and highest transparency
+- Commercial reliability of all solutions
+- Working software from day one' ?>
       </ul>
       <div class="combany__section-client-agile-icons container-fluid" id="combany__counter">
         <div class="row">
@@ -82,27 +89,23 @@
             <div class="combany__section-client-agile-img-wrapper">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
             </div>
-            <h2 class="counter-value" data-count="85"></h2>
-            <p>Web
-              Development</p>
+            <h2 class="counter-value" data-count="<?= get_theme_mod('combany_teams_3_number') != '' ? get_theme_mod('combany_teams_3_number') : '85' ?>"></h2>
+            <p><?= get_theme_mod('combany_teams_3_title') != '' ? get_theme_mod('combany_teams_3_title') : 'Web Development' ?></p>
           </div>
           <div class="col-sm combany__section-client-agile-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smartphone"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
-            <h2 class="counter-value" data-count="90"></h2>
-            <p>Mobile
-              Development</p>
+            <h2 class="counter-value" data-count="<?= get_theme_mod('combany_teams_4_number') != '' ? get_theme_mod('combany_teams_4_number') : '90' ?>"></h2>
+            <p><?= get_theme_mod('combany_teams_4_title') != '' ? get_theme_mod('combany_teams_4_title') : 'Mobile Development' ?></p>
           </div>
           <div class="col-sm combany__section-client-agile-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mic"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
-            <h2 class="counter-value" data-count="90"></h2>
-            <p>Voice-based
-              interaction</p>
+            <h2 class="counter-value" data-count="<?= get_theme_mod('combany_teams_5_number') != '' ? get_theme_mod('combany_teams_5_number') : '90' ?>"></h2>
+            <p><?= get_theme_mod('combany_teams_5_title') != '' ? get_theme_mod('combany_teams_5_title') : 'Voice-based interaction' ?></p>
           </div>
           <div class="col-sm combany__section-client-agile-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-archive"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
-            <h2 class="counter-value" data-count="95"></h2>
-            <p>IOT
-              Solutions</p>
+            <h2 class="counter-value" data-count="<?= get_theme_mod('combany_teams_6_number') != '' ? get_theme_mod('combany_teams_6_number') : '95' ?>"></h2>
+            <p><?= get_theme_mod('combany_teams_6_title') != '' ? get_theme_mod('combany_teams_6_title') : 'IOT Solutions' ?></p>
           </div>
         </div>
       </div>

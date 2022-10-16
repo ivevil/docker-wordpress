@@ -573,7 +573,7 @@ class Combany_Customizer {
 
 	// Fourth section
 	$wp_customize->add_section('combany_fourth_section', array(
-            'title' => __ ('Fourth Section', 'combany'),
+            'title' => __ ('Agile teams delivering', 'combany'),
             'priority' => 30,
             ));
 	
@@ -607,13 +607,13 @@ class Combany_Customizer {
 		
 	$wp_customize->add_setting( 'combany_teams_2_title', array(
 		  'sanitize_callback' => 'sanitize_text_field',
-		  'default' => 'Agile teams delivering',
+		  'default' => 'the future digital products for your business',
 		'transport' => 'refresh',
 		) );
 
 	$wp_customize->add_control( 'combany_teams_2_title', array(
 		  'section' => 'combany_fourth_section', 
-		  'label' => __( 'Main title' ),
+		  'label' => __( 'Subtitle' ),
 		) );
 	
 	$wp_customize->add_setting( 'combany_teams_description', array(
@@ -638,7 +638,7 @@ Working software from day one',
 
 	$wp_customize->add_control( 'combany_teams_3_title', array(
 		  'section' => 'combany_fourth_section', 
-		  'label' => __( 'Main title' ),
+		  'label' => __( 'First block title' ),
 		) );
 		
 	$wp_customize->add_setting( 'combany_teams_3_number', array(
@@ -650,7 +650,7 @@ Working software from day one',
 	$wp_customize->add_control( 'combany_teams_3_number', array(
 		  'section' => 'combany_fourth_section', 
 			'type' => 'number',
-		  'label' => __( 'Main title' ),
+		  'label' => __( 'First block percentage' ),
 		) );
 		
 	$wp_customize->add_setting( 'combany_teams_4_title', array(
@@ -661,7 +661,7 @@ Working software from day one',
 
 	$wp_customize->add_control( 'combany_teams_4_title', array(
 		  'section' => 'combany_fourth_section', 
-		  'label' => __( 'Main title' ),
+		  'label' => __( 'Second block title' ),
 		) );
 		
 	$wp_customize->add_setting( 'combany_teams_4_number', array(
@@ -673,7 +673,7 @@ Working software from day one',
 	$wp_customize->add_control( 'combany_teams_4_number', array(
 		  'section' => 'combany_fourth_section', 
 		  'type' => 'number',
-		  'label' => __( 'Main title' ),
+		  'label' => __( 'Second block percentage' ),
 		) );
 		
 	$wp_customize->add_setting( 'combany_teams_5_title', array(
@@ -684,7 +684,7 @@ Working software from day one',
 
 	$wp_customize->add_control( 'combany_teams_5_title', array(
 		  'section' => 'combany_fourth_section', 
-		  'label' => __( 'Main title' ),
+		  'label' => __( 'Third block title' ),
 		) );
 		
 	$wp_customize->add_setting( 'combany_teams_5_number', array(
@@ -696,7 +696,7 @@ Working software from day one',
 	$wp_customize->add_control( 'combany_teams_5_number', array(
 		  'section' => 'combany_fourth_section', 
 		  'type' => 'number',
-		  'label' => __( 'Main title' ),
+		  'label' => __( 'Third block percentage' ),
 		) );
 		
 	$wp_customize->add_setting( 'combany_teams_6_title', array(
@@ -707,7 +707,7 @@ Working software from day one',
 
 	$wp_customize->add_control( 'combany_teams_6_title', array(
 		  'section' => 'combany_fourth_section', 
-		  'label' => __( 'Main title' ),
+		  'label' => __( 'Fourth block title' ),
 		) );
 		
 	$wp_customize->add_setting( 'combany_teams_6_number', array(
@@ -719,7 +719,7 @@ Working software from day one',
 	$wp_customize->add_control( 'combany_teams_6_number', array(
 		  'section' => 'combany_fourth_section', 
 		  'type' => 'number',
-		  'label' => __( 'Main title' ),
+		  'label' => __( 'Fourth block percentage' ),
 		) );
 	
 	//FOOTER
