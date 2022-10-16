@@ -1,0 +1,152 @@
+footer {
+  margin-top: 100px;
+  background: $dark-blue;
+  width: 100%;
+}
+
+.combany {
+  &__footer-top {
+    padding: 30px;
+    @include flexbox;
+    @include flex-direction(row);
+    @include justify-content(center);
+    border-bottom: 2px solid #0079b2;
+
+    img {
+      margin: 0 auto;
+    }
+  }
+
+  &__footer-middle {
+    padding: 60px;
+    @include flexbox;
+    @include flex-direction(row);
+    @include justify-content(center);
+    @include flex-wrap(wrap);
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    color: white;
+    @include respond-to(medium-down) {
+      @include flex-direction(column);
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    &-wrapper {
+      @include flexbox;
+      @include flex-direction(row);
+      width: 33%;
+      @include respond-to(medium-down) {
+        padding-bottom: 15px;
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+
+    img {
+      height: 40px;
+	  object-fit: contain;
+      padding-top: 5px;
+      padding-right: 35px;
+      @include respond-to(medium-down) {
+        padding-right: 15px;
+        height: 30px;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    h3 {
+      font-size: 18px;
+    }
+
+    h4 {
+      font-size: 14px;
+      color: $blue;
+    }
+
+    &-call,
+    &-email,
+    &-pin {
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+  &__footer-bottom {
+    @include flexbox;
+    @include flex-direction(row);
+    @include justify-content(space-evenly);
+    align-items: center;
+    border-top: 1px solid #003a62;
+    padding: 20px 0;
+    color: $white;
+    @include respond-to(medium-down) {
+      @include flex-direction(column);
+      @include flex-wrap(wrap);
+      height: 155px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    &-back-to-top {
+      margin-bottom: -26px;
+      @include respond-to(medium-down) {
+        display: none;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &-social {
+      @include flexbox;
+      @include justify-content(space-between);
+
+      img {
+        padding-right: 10px;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__fb-icon,
+  &__insta-icon,
+  &__linkedin-icon {
+    background: url("images/fb-icon.png") no-repeat;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+  }
+
+  &__fb-icon {
+    background: url("images/fb-icon.png") no-repeat;
+
+    &:hover {
+      background: url("images/icon-facebook.png") no-repeat;
+    }
+  }
+
+  &__insta-icon {
+    background: url("images/icon-instagram.png") no-repeat;
+
+    &:hover {
+      background: url("images/icon-insta-blue.png") no-repeat;
+    }
+  }
+
+  &__linkedin-icon {
+    background: url("images/icon-linkedin.png") no-repeat;
+
+    &:hover {
+      background: url("images/icon-linkedin-blue.png") no-repeat;
+    }
+  }
+}

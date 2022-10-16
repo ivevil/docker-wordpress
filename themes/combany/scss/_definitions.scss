@@ -1,0 +1,26 @@
+/*
+Theme Name: Combany
+Author: Ivana Ive Andric
+Author URI: https://ivandric.com
+Description: Theme is made as a presentation website of a company, but it can be used as a website portfolio of individuals.
+Version: 1.3
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: blue, white, company, portfolio, light, blog, presentation, custom-menu, custom-footer, editor-style, customizer, featured-images, post-formats, slider
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+
+$blue: #00a5ea;
+$dark-blue: #002041;
+$white: #ffffff;
+$yellow: rgb(227, 247, 0);
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: $yellow;
+  }
