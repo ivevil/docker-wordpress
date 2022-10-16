@@ -15,6 +15,8 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="title" content="<?php bloginfo('name'); ?>" />
+  <meta name="description" content="<?php bloginfo('description'); ?>" />
   <title><?php bloginfo('name'); ?></title>
 </head>
 
@@ -54,31 +56,23 @@
       <span></span>
       <span></span>
       <ul id="menu">
-        <a href="#">
-          <li>Home</li>
-        </a>
-        <a href="#">
-          <li>News</li>
-        </a>
-        <a href="#">
-          <li>Careers</li>
-        </a>
-        <a href="#">
-          <li>People</li>
-        </a>
-        <a href="#">
-          <li>About Us</li>
-        </a>
-        <a href="#">
-          <li>Contact</li>
-        </a>
+      <?php
+        $menuLocations = get_nav_menu_locations();
+        $menuID = $menuLocations['header'];
+        $primaryNav = wp_get_nav_menu_items($menuID);
+
+        $i = 1;
+        foreach ($primaryNav as $navItem) {
+          echo '<a class="" href="' . $navItem->url . '" data-menuItemOrder="' . $i++ . '" title="' . $navItem->title . '">
+                    <li class="combany__navbar-menu-item">' . $navItem->title . '</li>
+                     </a>';
+        } ?>
       </ul>
     </div>
   </nav>
   <div class="<?= is_front_page() ? "combany-home" : "" ?>" id="top">
-    <?php if (is_front_page()) : ?>
+    <?php if ( is_home() ) : ?>
       <header style="background: url(<?= get_theme_mod('combany_first_image') != '' ? get_theme_mod('combany_first_image') : get_template_directory_uri() . '/images/background.png' ?>) no-repeat center center / cover;">
       <?php else : ?>
         <header class="combany-header-other">
-      </header>
         <?php endif; ?>
