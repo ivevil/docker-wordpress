@@ -12,6 +12,9 @@
             object-fit: cover;
         }
     }
+    &__section-news-card {
+        min-width: 275px;
+    }
 }
 
 .comment-respond {
@@ -61,4 +64,20 @@
         padding: 50px;
     }
 }
+
+.form-submit {
+    display: flex;
+    justify-content: center;
+    #submit {
+        border-radius: 20px;
+        background: black;
+        padding: 10px 20px;
+        color: white;
+    }
+}
+
+.comment-form-comment label {
+    display: none;
+}
+
 
