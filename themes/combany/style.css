@@ -718,7 +718,8 @@ body {
 }
 .combany__section-news-container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto !important;
+  justify-content: center;
 }
 .combany__section-news-card {
   -webkit-box-shadow: -1px 3px 32px -9px rgba(0, 0, 0, 0.54);
@@ -726,6 +727,7 @@ body {
   box-shadow: -1px 3px 32px -9px rgba(0, 0, 0, 0.54);
   margin-right: 20px;
   padding: 22px;
+  margin-bottom: 20px;
 }
 .combany__section-news-card img {
   width: 100%;
