@@ -8,7 +8,7 @@
         padding: 20px;
       }
         @include respond-to(small-down) {
-          height: 130vH;
+          height: auto;
         }
     &-title {
       text-align: center;
@@ -33,6 +33,9 @@
       @include justify-content(flex-end);
       height: 400px;
       padding-top: 30px;
+      @include respond-to(small-down) {
+        height: auto;
+      }
     }
     &-left {
       width: 50%;

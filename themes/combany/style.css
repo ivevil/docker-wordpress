@@ -51,8 +51,8 @@ body {
   }
   .combany__mobile-nav #menuToggle {
     display: block;
-    position: relative;
-    top: 30px;
+    position: fixed;
+    top: 15px;
     padding-left: 10px;
     z-index: 1;
     -webkit-user-select: none;
@@ -152,6 +152,11 @@ body {
   background: transparent;
   position: fixed;
   width: 100%;
+}
+@media only screen and (max-width: 767px) {
+  .combany #navbar {
+    display: none;
+  }
 }
 .combany #navbar img {
   padding-left: 125px;
@@ -424,7 +429,7 @@ body {
 }
 @media only screen and (max-width: 767px) {
   .combany__section-client-work {
-    height: 130vH;
+    height: auto;
   }
 }
 .combany__section-client-work-title {
@@ -463,6 +468,11 @@ body {
   -ms-flex-pack: flex-end;
   height: 400px;
   padding-top: 30px;
+}
+@media only screen and (max-width: 767px) {
+  .combany__section-client-work-both {
+    height: auto;
+  }
 }
 .combany__section-client-work-left {
   width: 50%;

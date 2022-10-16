@@ -9,8 +9,8 @@
 
       #menuToggle {
         display: block;
-        position: relative;
-        top: 30px;
+        position: fixed;
+        top: 15px;
         padding-left: 10px;
         z-index: 1;
         -webkit-user-select: none;
@@ -128,6 +128,9 @@
     background: transparent;
     position: fixed;
     width: 100%;
+    @include respond-to(small-down) {
+      display: none;
+    }
     img {
       padding-left: 125px;
     }
