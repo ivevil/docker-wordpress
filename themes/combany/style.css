@@ -16,7 +16,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
 body {
   font-family: "Open Sans", sans-serif;
-  background: rgb(227, 247, 0);
 }
 
 .combany {
@@ -149,12 +148,19 @@ body {
     padding-left: 0;
   }
 }
+.combany #navbar {
+  background: transparent;
+  position: fixed;
+  width: 100%;
+}
+.combany #navbar img {
+  padding-left: 125px;
+}
 .combany #navbar.sticky {
   position: fixed;
   background: #ffffff;
   color: black;
   width: 100%;
-  margin-left: -125px;
   z-index: 100;
 }
 @media only screen and (max-width: 1023px) {
@@ -162,7 +168,7 @@ body {
     margin-left: 0;
   }
 }
-.combany #navbar.sticky .uhp__navbar-menu-item {
+.combany #navbar.sticky .combany__navbar-menu-item {
   color: black;
 }
 .combany #navbar.sticky img {
@@ -189,9 +195,15 @@ body {
   list-style-type: none;
   font-size: 16px;
 }
+.combany__navbar-item img {
+  max-height: 50px;
+}
 .combany__navbar a {
   text-decoration: none;
   list-style-type: none;
+}
+.combany__navbar a:hover {
+  text-decoration: none;
 }
 .combany__navbar-menu {
   width: 600px;
@@ -705,6 +717,11 @@ body {
   margin-right: 20px;
   padding: 22px;
 }
+.combany__section-news-card img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+}
 @media only screen and (max-width: 1023px) {
   .combany__section-news-card {
     margin-bottom: 20px;
@@ -807,6 +824,7 @@ footer {
 }
 .combany__footer-top img {
   margin: 0 auto;
+  max-height: 50px;
 }
 .combany__footer-middle {
   padding: 60px;

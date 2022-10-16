@@ -124,18 +124,26 @@
     }
   }
 
+  #navbar {
+    background: transparent;
+    position: fixed;
+    width: 100%;
+    img {
+      padding-left: 125px;
+    }
+  }
+
   #navbar.sticky {
     position: fixed;
     background: $white;
     color: black;
     width: 100%;
-    margin-left: -125px;
     z-index: 100;
     @include respond-to(medium-down) {
       margin-left: 0;
     }
 
-    .uhp__navbar-menu-item {
+    .combany__navbar-menu-item {
       color: black;
     }
 
@@ -160,11 +168,18 @@
       text-decoration: none;
       list-style-type: none;
       font-size: 16px;
+
+      img {
+        max-height: 50px;
+      }
     }
 
     a {
       text-decoration: none;
       list-style-type: none;
+      &:hover {
+        text-decoration: none;
+      }
     }
 
     &-menu {
