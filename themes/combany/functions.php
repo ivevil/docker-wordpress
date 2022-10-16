@@ -35,6 +35,8 @@ register_nav_menus( array(
 
 add_theme_support('post-thumbnails');
 
+add_image_size( 'slider-image', 431, 294 );
+
 //LIMIT EXCERPT TO 20 CHARS
 function custom_excerpt_length( $length ) {
     return 20;

@@ -15,12 +15,16 @@
         <div class="combany__section-our-services-boxes">
 			<?php for($i = 1; $i < 4; $i++): ?>
           <div class="combany__section-our-services-box">
-            <img src="<?= get_template_directory_uri() ?>/images/web-design.png" alt="">
+            <?php 
+            $imgadded = get_theme_mod('combany_' . $i . '_image');
+            $imgUrl = get_theme_mod('combany_' . $i . '_image') != '' ? wp_get_attachment_image_url(get_theme_mod('combany_' . $i . '_image')) : get_template_directory_uri() . "/images/web-design.png";
+            ?>
+            <img src="<?= $imgUrl ?>" alt="Service <?= $i ?>">
             <h2><?= get_theme_mod('combany_' . $i . '_title') != '' ? get_theme_mod('combany_' . $i . '_title') : "Our Services" ?></h2>
             <h6><?= get_theme_mod('combany_' . $i . '_description') != '' ? get_theme_mod('combany_' . $i . '_description') : "State of the art front-end applications
               and back-end systems." ?></h6>
-            	<a href="">
-			  		<button>Read more</button>
+            	<a href="<?= get_theme_mod('combany_' . $i . '_button_url') != '' ? get_theme_mod('combany_' . $i . '_button_url') : "https://google.com" ?>">
+			  		<button><?= get_theme_mod('combany_' . $i . '_button') != '' ? get_theme_mod('combany_' . $i . '_button') : "Read more" ?></button>
 				</a>
           </div>
 			<?php endfor ?>
@@ -39,7 +43,7 @@
 
       <div class="combany__section-client-work-both">
         <div class="combany__section-client-work-left">
-        <?php $urlImg = get_theme_mod('combany_client_image') != '' ? get_theme_mod('combany_client_image') : get_template_directory_uri() . '/images/iphones-triangle.png' ?>
+        <?php $urlImg = get_theme_mod('combany_client_image') != '' ? wp_get_attachment_image_url(get_theme_mod('combany_client_image')) : get_template_directory_uri() . '/images/iphones-triangle.png' ?>
         <?php //var_dump($urlImg);die; ?>  
         <img src="<?= $urlImg ?>" alt="Client image">
         </div>
@@ -62,11 +66,21 @@
     </div>
 
     <div class="carousel variable-width">
-      <div><img src="<?= get_template_directory_uri() ?>/images/computer.png"></div>
-      <div><img src="<?= get_template_directory_uri() ?>/images/mobile-lime.png"></div>
-      <div><img src="<?= get_template_directory_uri() ?>/images/laptop-orange.png"></div>
-      <div><img src="<?= get_template_directory_uri() ?>/images/mobile-green.png"></div>
-      <div><img src="<?= get_template_directory_uri() ?>/images/laptop-blue.png"></div>
+    <?php if(get_theme_mod('combany_slider_1_image') != ''): ?>
+      <div><img alt="Slider first image" src="<?= get_theme_mod('combany_slider_1_image') != '' ? wp_get_attachment_image_src(get_theme_mod('combany_slider_1_image'), 'slider-image')[0] : get_template_directory_uri() . '/images/computer.png' ?>"></div>
+    <?php endif; ?>
+    <?php if(get_theme_mod('combany_slider_2_image') != ''): ?>
+      <div><img alt="Slider second image" src="<?= get_theme_mod('combany_slider_2_image') != '' ? wp_get_attachment_image_src(get_theme_mod('combany_slider_2_image'), 'slider-image')[0] : get_template_directory_uri() . '/images/mobile-lime.png' ?>"></div>
+    <?php endif; ?>
+    <?php if(get_theme_mod('combany_slider_3_image') != ''): ?>
+      <div><img alt="Slider third image" src="<?= get_theme_mod('combany_slider_3_image') != '' ? wp_get_attachment_image_src(get_theme_mod('combany_slider_3_image'), 'slider-image')[0] : get_template_directory_uri() . '/images/laptop-orange.png' ?>"></div>
+    <?php endif; ?>
+    <?php if(get_theme_mod('combany_slider_4_image') != ''): ?>
+      <div><img alt="Slider fourth image" src="<?= get_theme_mod('combany_slider_4_image') != '' ? wp_get_attachment_image_src(get_theme_mod('combany_slider_4_image'), 'slider-image')[0] : get_template_directory_uri() . '/images/mobile-green.png' ?>"></div>
+    <?php endif; ?>
+    <?php if(get_theme_mod('combany_slider_5_image') != ''): ?>
+      <div><img alt="Slider fifth image" src="<?= get_theme_mod('combany_slider_5_image') != '' ? wp_get_attachment_image_src(get_theme_mod('combany_slider_5_image'), 'slider-image')[0] : get_template_directory_uri() . '/images/laptop-blue.png' ?>"></div>
+    <?php endif; ?>
     </div>
 
     <div class="combany__section-client-agile">

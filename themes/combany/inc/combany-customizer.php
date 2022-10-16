@@ -242,7 +242,7 @@ class Combany_Customizer {
     ));
 	
 	$wp_customize->add_control(
-       new WP_Customize_Image_Control(
+       new WP_Customize_Cropped_Image_Control(
            $wp_customize,
            'combany_2_image',
            array(
@@ -299,12 +299,12 @@ class Combany_Customizer {
 		  'label' => __( 'Button url' ),
 		) );
 	
-		$wp_customize->add_setting('combany_3_image', array(
+	$wp_customize->add_setting('combany_3_image', array(
         'transport'     => 'refresh',
     ));
 	
 	$wp_customize->add_control(
-       new WP_Customize_Image_Control(
+       new WP_Customize_Cropped_Image_Control(
            $wp_customize,
            'combany_3_image',
            array(
@@ -339,7 +339,7 @@ class Combany_Customizer {
 		  'label' => __( 'Main description' ),
 		) );
 		
-			$wp_customize->add_setting( 'combany_3_button', array(
+	$wp_customize->add_setting( 'combany_3_button', array(
 		  'sanitize_callback' => 'sanitize_text_field',
 		  'default' => 'Read more',
 		'transport' => 'refresh',
@@ -393,18 +393,21 @@ class Combany_Customizer {
 		) );
 	
 	$wp_customize->add_setting('combany_client_image', array(
-		'type' => 'theme_mode',
 		'transport'     => 'refresh',
-		'capability' => 'edit_theme_options',
 		'sanitize_callback' => array($this, 'sanitize_custom_url')
     ));
 	
-	$wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, 'combany_client_image', array(
+	$wp_customize->add_control(
+		new WP_Customize_Cropped_Image_Control(
+			$wp_customize, 
+			'combany_client_image',
+			 array(
                'label'      => __( 'Upload an image', 'combany' ),
                'section'    => 'combany_second_section',
                'settings'   => 'combany_client_image',
+			   'context' => 'combany_client_image',
 			   'width' => 250,
-			   'height' => 150
+			   'height' => 150,
            )));
 	
 	$wp_customize->add_setting( 'combany_second_title', array(
@@ -519,57 +522,87 @@ class Combany_Customizer {
 	$wp_customize->add_setting('combany_slider_1_image', array(
         'transport'     => 'refresh',
     ));
-	
-	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'combany_slider_1_image', array(
+
+	$wp_customize->add_control(
+		new WP_Customize_Cropped_Image_Control(
+			$wp_customize, 
+			'combany_slider_1_image',
+			 array(
                'label'      => __( 'Upload an image', 'combany' ),
                'section'    => 'combany_third_section',
                'settings'   => 'combany_slider_1_image',
-               'context'    => 'combany_slider_1_image' 
+			   'context' => 'combany_slider_1_image',
+			   'width' => 431,
+			   'height' => 294,
            )));
 		
 	$wp_customize->add_setting('combany_slider_2_image', array(
         'transport'     => 'refresh',
     ));
 	
-	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'combany_slider_2_image', array(
+	$wp_customize->add_control(
+		new WP_Customize_Cropped_Image_Control(
+			$wp_customize, 
+			'combany_slider_2_image',
+			 array(
                'label'      => __( 'Upload an image', 'combany' ),
                'section'    => 'combany_third_section',
                'settings'   => 'combany_slider_2_image',
-               'context'    => 'combany_slider_2_image' 
+			   'context' => 'combany_slider_2_image',
+			   'width' => 431,
+			   'height' => 294,
            )));
 		
 	$wp_customize->add_setting('combany_slider_3_image', array(
         'transport'     => 'refresh',
     ));
-	
-	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'combany_slider_3_image', array(
-               'label'      => __( 'Upload an image', 'combany' ),
-               'section'    => 'combany_third_section',
-               'settings'   => 'combany_slider_3_image',
-               'context'    => 'combany_slider_3_image' 
-           )));
+
+	$wp_customize->add_control(
+	new WP_Customize_Cropped_Image_Control(
+		$wp_customize, 
+		'combany_slider_3_image',
+			array(
+			'label'      => __( 'Upload an image', 'combany' ),
+			'section'    => 'combany_third_section',
+			'settings'   => 'combany_slider_3_image',
+			'context' => 'combany_slider_3_image',
+			'width' => 431,
+			'height' => 294,
+		)));
 		
 	$wp_customize->add_setting('combany_slider_4_image', array(
         'transport'     => 'refresh',
     ));
 	
-	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'combany_slider_4_image', array(
-               'label'      => __( 'Upload an image', 'combany' ),
-               'section'    => 'combany_third_section',
-               'settings'   => 'combany_slider_4_image',
-               'context'    => 'combany_slider_4_image' 
-           )));
+	$wp_customize->add_control(
+		new WP_Customize_Cropped_Image_Control(
+			$wp_customize, 
+			'combany_slider_4_image',
+				array(
+				'label'      => __( 'Upload an image', 'combany' ),
+				'section'    => 'combany_third_section',
+				'settings'   => 'combany_slider_4_image',
+				'context' => 'combany_slider_4_image',
+				'width' => 431,
+				'height' => 294,
+			)));
 		
 	$wp_customize->add_setting('combany_slider_5_image', array(
         'transport'     => 'refresh',
     ));
 	
-	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'combany_slider_5_image', array(
-               'label'      => __( 'Upload an image', 'combany' ),
-               'section'    => 'combany_third_section',
-               'settings'   => 'combany_slider_5_image',
-               'context'    => 'combany_slider_5_image' 
-           )));
+	$wp_customize->add_control(
+		new WP_Customize_Cropped_Image_Control(
+			$wp_customize, 
+			'combany_slider_5_image',
+				array(
+				'label'      => __( 'Upload an image', 'combany' ),
+				'section'    => 'combany_third_section',
+				'settings'   => 'combany_slider_5_image',
+				'context' => 'combany_slider_5_image',
+				'width' => 431,
+				'height' => 294,
+			)));
 
 	// Fourth section
 	$wp_customize->add_section('combany_fourth_section', array(
