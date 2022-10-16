@@ -1,32 +1,33 @@
 <?php
 
-function combany_post_types() {
-    
-     // Post type: careers
+function combany_post_types()
+{
+
+  // Post type: careers
   register_post_type('careers', array(
-      'map_meta_cap' => true,
-      'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
-      'rewrite' => array('slug' => 'careers'),
-      'has_archive' => true,
-      'public' => true,
-	  'show_in_rest' => true,
-      'labels' => array(
-          'name' => 'Careers',
-          'add_new_item' => 'Add new career',
-          'edit_item' => 'Edit Career',
-          'all_items' => 'All Career',
-          'singular_name' => 'Career'
-          ),
-          'menu_icon' => 'dashicons-location-alt'
-      ));
-      
-    register_post_type( 'book', array(
-      'public'       => true,
-      'show_in_rest' => true,
-      'label'        => 'Books'
-    ));
-	
-    // Post type: people
+    'map_meta_cap' => true,
+    'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
+    'rewrite' => array('slug' => 'careers'),
+    'has_archive' => true,
+    'public' => true,
+    'show_in_rest' => true,
+    'labels' => array(
+      'name' => 'Careers',
+      'add_new_item' => 'Add new career',
+      'edit_item' => 'Edit Career',
+      'all_items' => 'All Career',
+      'singular_name' => 'Career'
+    ),
+    'menu_icon' => 'dashicons-location-alt'
+  ));
+
+  register_post_type('book', array(
+    'public'       => true,
+    'show_in_rest' => true,
+    'label'        => 'Books'
+  ));
+
+  // Post type: people
   register_post_type('people', array(
     'map_meta_cap' => true,
     'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
@@ -42,7 +43,7 @@ function combany_post_types() {
     ),
     'menu_icon' => 'dashicons-calendar'
   ));
-  
+
   // Post type: about us
   register_post_type('about-us', array(
     'map_meta_cap' => true,
@@ -59,7 +60,6 @@ function combany_post_types() {
     ),
     'menu_icon' => 'dashicons-book-alt'
   ));
- 
 }
 
 add_action('init', 'combany_post_types');

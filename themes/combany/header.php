@@ -1,7 +1,7 @@
 <?php
 
 /**
- * The header for our theme
+ * The header
  *
  * @package combany
  * @subpackage combany

@@ -1,3 +1,14 @@
+<?php
+
+/**
+ *
+ * Footer 
+ *
+ * @package combany
+ * @subpackage combany
+ * @since Combany 1.0
+ */
+?>
   <footer>
     <div class="combany__footer-top">
       <a href="#"><img src="<?= get_template_directory_uri() ?>/images/logo.png" alt=""></a>
@@ -34,32 +45,33 @@
     </div>
     <div class="combany__footer-bottom">
       <div class="combany__footer-bottom-copyright">
-        © <?= date(Y); ?> <?php bloginfo( 'name' ); ?>. All rights reserved.
+        © <?= date(Y); ?> <?php bloginfo('name'); ?>. All rights reserved.
       </div>
       <div class="combany__footer-bottom-back-to-top">
         <a href="#" id="back-to-top"><img src="<?= get_template_directory_uri() ?>/images/back-to-top.png" alt=""></a>
       </div>
       <div class="combany__footer-bottom-social">
-      <?php if(get_theme_mod('combany_footer_facebook') != ''): ?>
-        <a href="<?= get_theme_mod('combany_footer_facebook') != '' ? get_theme_mod('combany_footer_facebook') : 'https://facebook.com/page/combany' ?>">
-          <div class="combany__fb-icon"></div>
-        </a>
+        <?php if (get_theme_mod('combany_footer_facebook') != '') : ?>
+          <a href="<?= get_theme_mod('combany_footer_facebook') != '' ? get_theme_mod('combany_footer_facebook') : 'https://facebook.com/page/combany' ?>">
+            <div class="combany__fb-icon"></div>
+          </a>
         <?php endif; ?>
-        <?php if(get_theme_mod('combany_footer_instagram') != ''): ?>
-        <a href="<?= get_theme_mod('combany_footer_instagram') != '' ? get_theme_mod('combany_footer_instagram') : 'https://instagram.com/combany' ?>">
-          <div class="combany__insta-icon"></div>
-        </a>
+        <?php if (get_theme_mod('combany_footer_instagram') != '') : ?>
+          <a href="<?= get_theme_mod('combany_footer_instagram') != '' ? get_theme_mod('combany_footer_instagram') : 'https://instagram.com/combany' ?>">
+            <div class="combany__insta-icon"></div>
+          </a>
         <?php endif; ?>
-        <?php if(get_theme_mod('combany_footer_linkedin') != ''): ?>
-        <a href="<?= get_theme_mod('combany_footer_linkedin') != '' ? get_theme_mod('combany_footer_linkedin') : 'https://linkedin.com/combany' ?>">
-          <div class="combany__linkedin-icon"></div>
-        </a>
+        <?php if (get_theme_mod('combany_footer_linkedin') != '') : ?>
+          <a href="<?= get_theme_mod('combany_footer_linkedin') != '' ? get_theme_mod('combany_footer_linkedin') : 'https://linkedin.com/combany' ?>">
+            <div class="combany__linkedin-icon"></div>
+          </a>
         <?php endif; ?>
       </div>
     </div>
   </footer>
 
-<?php wp_footer(); ?>
+  <?php wp_footer(); ?>
 
-</body>
-</html>
+  </body>
+
+  </html>

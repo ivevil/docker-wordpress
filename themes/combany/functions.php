@@ -3,7 +3,7 @@
  * Combany functions and definitions
  *
  *
- * @package WordPress
+ * @package combany
  * @subpackage combany
  * @since 1.0.0
  */

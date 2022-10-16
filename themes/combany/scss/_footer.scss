@@ -28,6 +28,7 @@ footer {
     width: 90%;
     margin: 0 auto;
     color: white;
+
     @include respond-to(medium-down) {
       @include flex-direction(column);
       width: 100%;
@@ -38,6 +39,7 @@ footer {
       @include flexbox;
       @include flex-direction(row);
       width: 33%;
+
       @include respond-to(medium-down) {
         padding-bottom: 15px;
         width: 100%;
@@ -47,9 +49,10 @@ footer {
 
     img {
       height: 40px;
-	  object-fit: contain;
+      object-fit: contain;
       padding-top: 5px;
       padding-right: 35px;
+
       @include respond-to(medium-down) {
         padding-right: 15px;
         height: 30px;
@@ -85,6 +88,7 @@ footer {
     border-top: 1px solid #003a62;
     padding: 20px 0;
     color: $white;
+
     @include respond-to(medium-down) {
       @include flex-direction(column);
       @include flex-wrap(wrap);
@@ -95,6 +99,7 @@ footer {
 
     &-back-to-top {
       margin-bottom: -26px;
+
       @include respond-to(medium-down) {
         display: none;
       }

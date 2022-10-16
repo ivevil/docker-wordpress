@@ -10,11 +10,11 @@ $('.variable-width').slick({
 
 var a = 0;
 
-$(window).scroll(function() {
+$(window).scroll(function () {
 
   var oTop = $('#combany__counter').offset().top - window.innerHeight;
   if (a == 0 && $(window).scrollTop() > oTop) {
-    $('.counter-value').each(function() {
+    $('.counter-value').each(function () {
       var $this = $(this),
         countTo = $this.attr('data-count');
       $({
@@ -24,10 +24,10 @@ $(window).scroll(function() {
       }, {
         duration: 2000,
         easing: 'swing',
-        step: function() {
+        step: function () {
           $this.text(Math.floor(this.countNum) + "%");
         },
-        complete: function() {
+        complete: function () {
           $this.text(this.countNum + "%");
         }
 
@@ -38,7 +38,7 @@ $(window).scroll(function() {
 
 });
 
-window.onscroll = function() {
+window.onscroll = function () {
   myFunction()
 };
 
@@ -53,7 +53,7 @@ function myFunction() {
   }
 }
 
-$('#back-to-top').on('click', function(e) {
+$('#back-to-top').on('click', function (e) {
   $("html, body").animate({
     scrollTop: $("#top").offset().top
   }, 500);
