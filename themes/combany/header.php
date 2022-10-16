@@ -77,7 +77,7 @@
   </nav>
   <div class="<?= is_front_page() ? "combany-home" : "" ?>" id="top">
     <?php if (is_front_page()) : ?>
-      <header style="background-image: url(<?= get_theme_mod('combany_first_image') != '' ? get_theme_mod('combany_first_image') : get_template_directory_uri() . '/images/background.png' ?>);">
+      <header style="background: url(<?= get_theme_mod('combany_first_image') != '' ? get_theme_mod('combany_first_image') : get_template_directory_uri() . '/images/background.png' ?>) no-repeat center center / cover;">
       <?php else : ?>
         <header class="combany-header-other">
         <?php endif; ?>

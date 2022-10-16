@@ -93,31 +93,40 @@
             <p><?= get_theme_mod('combany_teams_3_title') != '' ? get_theme_mod('combany_teams_3_title') : 'Web Development' ?></p>
           </div>
           <div class="col-sm combany__section-client-agile-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smartphone"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+            <div class="combany__section-client-agile-img-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smartphone"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+            </div>
             <h2 class="counter-value" data-count="<?= get_theme_mod('combany_teams_4_number') != '' ? get_theme_mod('combany_teams_4_number') : '90' ?>"></h2>
             <p><?= get_theme_mod('combany_teams_4_title') != '' ? get_theme_mod('combany_teams_4_title') : 'Mobile Development' ?></p>
           </div>
           <div class="col-sm combany__section-client-agile-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mic"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+            <div class="combany__section-client-agile-img-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mic"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+            </div>
             <h2 class="counter-value" data-count="<?= get_theme_mod('combany_teams_5_number') != '' ? get_theme_mod('combany_teams_5_number') : '90' ?>"></h2>
             <p><?= get_theme_mod('combany_teams_5_title') != '' ? get_theme_mod('combany_teams_5_title') : 'Voice-based interaction' ?></p>
           </div>
           <div class="col-sm combany__section-client-agile-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-archive"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
+            <div class="combany__section-client-agile-img-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-archive"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
+            </div>
             <h2 class="counter-value" data-count="<?= get_theme_mod('combany_teams_6_number') != '' ? get_theme_mod('combany_teams_6_number') : '95' ?>"></h2>
             <p><?= get_theme_mod('combany_teams_6_title') != '' ? get_theme_mod('combany_teams_6_title') : 'IOT Solutions' ?></p>
           </div>
         </div>
       </div>
     </div>
+        <?php //var_dump(get_theme_mod('combany_show_articles'));die; ?>
+    <?php if(get_theme_mod('combany_show_articles') != '0'): ?>
     <hr class="combany__section-divider">
     <div class="combany__section-news container-fluid">
       <div class="combany__section-news-title">News & Events</div>
       <div class="row combany__section-news-container">
 		  <?php 
+      $artNumber = get_theme_mod('combany_articles_number') != '' ? get_theme_mod('combany_articles_number') : '3';
 	$three_last_posts = new WP_Query(array(
 			'post_type' => 'post',
-		  'posts_per_page' => 3,
+		  'posts_per_page' => $artNumber,
 		  'orderby' => 'date',
 		  'order' => 'DESC',
         )); ?>
@@ -158,6 +167,7 @@
 	endif; ?>
       </div>
     </div>
+    <?php endif; ?>
   </div>
 
 <?php get_footer();

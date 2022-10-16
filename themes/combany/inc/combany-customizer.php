@@ -87,32 +87,32 @@ class Combany_Customizer {
        )
    );
 	
-	$wp_customize->add_setting( 'combany_video',
-   array(
-      'default' => '',
-      'transport' => 'refresh',
-      'sanitize_callback' => 'absint',
-       'type' => 'theme_mod',
-   )
-);
+// 	$wp_customize->add_setting( 'combany_video',
+//    array(
+//       'default' => '',
+//       'transport' => 'refresh',
+//       'sanitize_callback' => 'absint',
+//        'type' => 'theme_mod',
+//    )
+// );
 
-	$wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'combany_video',
-	   array(
-		  'label' => __( 'Default Media Control' ),
-		  'description' => esc_html__( 'This is the description for the Media Control' ),
-		  'section' => 'combany_header',
-		  'mime_type' => 'video',  // Required. Can be image, audio, video, application, text
-		  'button_labels' => array( // Optional
-			 'select' => __( 'Select File' ),
-			 'change' => __( 'Change File' ),
-			 'default' => __( 'Default' ),
-			 'remove' => __( 'Remove' ),
-			 'placeholder' => __( 'No file selected' ),
-			 'frame_title' => __( 'Select File' ),
-			 'frame_button' => __( 'Choose File' ),
-		  )
-	   )
-	) );
+// 	$wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'combany_video',
+// 	   array(
+// 		  'label' => __( 'Default Media Control' ),
+// 		  'description' => esc_html__( 'Select video or image for top section' ),
+// 		  'section' => 'combany_header',
+// 		  'mime_type' => 'video, image',  // Required. Can be image, audio, video, application, text
+// 		  'button_labels' => array( // Optional
+// 			 'select' => __( 'Select File' ),
+// 			 'change' => __( 'Change File' ),
+// 			 'default' => __( 'Default' ),
+// 			 'remove' => __( 'Remove' ),
+// 			 'placeholder' => __( 'No file selected' ),
+// 			 'frame_title' => __( 'Select File' ),
+// 			 'frame_button' => __( 'Choose File' ),
+// 		  )
+// 	   )
+// 	) );
 	
 	$wp_customize->add_setting( 'main_title', array(
 		  'sanitize_callback' => 'sanitize_text_field',
@@ -721,6 +721,45 @@ Working software from day one',
 		  'type' => 'number',
 		  'label' => __( 'Fourth block percentage' ),
 		) );
+
+	// Fifth section
+	$wp_customize->add_section('combany_fifth_section', array(
+		'title' => __ ('News & Events section', 'combany'),
+		'priority' => 30,
+		));
+
+	$wp_customize->add_setting( 'combany_show_articles', array(
+		'default'    => '1'
+	) );
+
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'combany_show_articles',
+			array(
+				'label'     => __('Show Articles section', 'combany'),
+				'section'   => 'combany_fifth_section',
+				'settings'  => 'combany_show_articles',
+				'type'      => 'checkbox',
+			)
+		)
+	);
+
+	$wp_customize->add_setting( 'combany_articles_number', array(
+		'sanitize_callback' => 'sanitize_text_field',
+		'default' => '3',
+	  	'transport' => 'refresh',
+	  ) );
+
+  $wp_customize->add_control( 'combany_articles_number', array(
+		'section' => 'combany_fifth_section', 
+		'type' => 'number',
+		'input_attrs' => array(
+			'min' => '1',
+		),
+		'label' => __( 'Amount of articles shown in the section' ),
+	  ) );
+
 	
 	//FOOTER
 	
