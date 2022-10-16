@@ -150,6 +150,7 @@ body {
 }
 .combany #navbar {
   top: 0;
+  z-index: 1000;
   background: transparent;
   position: fixed;
   width: 100%;

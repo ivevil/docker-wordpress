@@ -80,21 +80,7 @@ function get_custom_menu() {
     if ( !is_admin() ) {
     	require(get_template_directory() . '/custom-style.php');
     }
-    
-    if (is_admin()) {
-      require(get_template_directory() . '/inc/combany-post-types.php');   
-    }
 
 	require(get_stylesheet_directory() . '/inc/combany-customizer.php');
 	new Combany_Customizer();
 
-function combany_custom_rest() {
-  register_rest_field('careers', array(
-    'get_callback' => function() {
-		return 'test'; }
-  ));
-}
-
-add_action('rest_api_init', 'combany_custom_rest');
-
-	
